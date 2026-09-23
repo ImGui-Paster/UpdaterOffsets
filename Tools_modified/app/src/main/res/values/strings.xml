@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Offset Updater</string>
+    <string name="hero_badge">App icon</string>
+    <string name="hero_subtitle">Automatically syncs offsets between SDK dump and Offsets.h — select bitness and version first</string>
+    <string name="credit_line">Tool provided by Arisu</string>
+    <string name="credit_prefix">Tool provided by </string>
+    <string name="credit_name">Arisu</string>
+    <string name="config_title">Configuration</string>
+    <string name="select_sdk">Choose SDK File (.txt)</string>
+    <string name="select_offset">Choose Offset File (.h)</string>
+    <string name="no_sdk_selected">No SDK file selected</string>
+    <string name="no_offset_selected">No offset file selected</string>
+    <string name="label_bits">Bitness</string>
+    <string name="label_version">Version</string>
+    <string name="rb_64">64-bit</string>
+    <string name="rb_32">32-bit</string>
+    <string name="rb_global">Global</string>
+    <string name="rb_vng">VNG</string>
+    <string name="rb_bgmi">BGMI</string>
+    <string name="log_title">Log Preview</string>
+    <string name="empty_log">No logs yet.\n\nSelect SDK + Offsets.h, pick bitness and version, then tap Start Update.</string>
+    <string name="clear_log">Clear log</string>
+    <string name="dump_log">Download log</string>
+    <string name="footer_stop">Stop</string>
+    <string name="footer_start">Start Update</string>
+</resources>
