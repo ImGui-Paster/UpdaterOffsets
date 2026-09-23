@@ -18,7 +18,11 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-          cache: gradle
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.14.3"
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v4
@@ -30,15 +34,10 @@ jobs:
           yes | sdkmanager --licenses >/dev/null || true
           sdkmanager "platforms;android-35"
 
-      - name: Show installed Android SDK
+      - name: Generate Gradle Wrapper
         run: |
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
-          ls -la "$ANDROID_SDK_ROOT/platforms" || true
-          ls -la "$ANDROID_SDK_ROOT/build-tools" || true
-
-      - name: Make Gradle executable
-        run: chmod +x ./gradlew
+          gradle wrapper --gradle-version 8.14.3
+          chmod +x ./gradlew
 
       - name: Build debug APK
         run: ./gradlew --no-daemon :app:assembleDebug --stacktrace
